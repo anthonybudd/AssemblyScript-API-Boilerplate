@@ -1,0 +1,18 @@
+default_host = "localhost:3000"
+
+[[module]]
+route = "/"
+module = "./build/optimized.wasm"
+entrypoint = "index"
+
+
+[[module]]
+route = "/_readiness"
+module = "./build/optimized.wasm"
+entrypoint = "_readiness"
+
+
+[[module]]
+route = "/json"
+module = "./build/optimized.wasm"
+entrypoint = "json"

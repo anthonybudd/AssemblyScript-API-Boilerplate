@@ -1,0 +1,27 @@
+{
+  "name": "assemblyscript-api-boilerplate",
+  "author": "Anthony Budd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "asbuild:untouched": "asc src/index.ts --target debug",
+    "asbuild:optimized": "asc src/index.ts --target release",
+    "build": "npm run asbuild:untouched && npm run asbuild:optimized",
+    "download-binary:mac": "rm -rf binary && mkdir binary && cd binary && wget https://github.com/deislabs/wagi/releases/download/v0.8.1/wagi-v0.8.1-macos-amd64.tar.gz && tar -zxf wagi-v0.8.1-macos-amd64.tar.gz && cd ..",
+    "serve": "./binary/wagi -c src/routes.toml"
+  },
+  "keywords": [
+    "webassembly",
+    "wasi"
+  ],
+  "dependencies": {
+    "@assemblyscript/loader": "^0.15.2",
+    "assemblyscript-json": "^1.1.0"
+  },
+  "devDependencies": {
+    "as-wasi": "^0.4.0",
+    "assemblyscript": "^0.15.2"
+  }
+}
