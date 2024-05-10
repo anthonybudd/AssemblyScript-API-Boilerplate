@@ -2,17 +2,17 @@ default_host = "localhost:3000"
 
 [[module]]
 route = "/"
-module = "./build/optimized.wasm"
+module = "./build/optimized.wat"
 entrypoint = "index"
 
 
 [[module]]
 route = "/_readiness"
-module = "./build/optimized.wasm"
+module = "./build/optimized.wat"
 entrypoint = "_readiness"
 
 
 [[module]]
 route = "/json"
-module = "./build/optimized.wasm"
+module = "./build/optimized.wat"
 entrypoint = "json"

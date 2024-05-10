@@ -2,11 +2,13 @@
 
 An experiment building a REST API using WASM. I'm not sure this is the correct use of this technology.
 
-Code taken from [deislabs/wagi](https://github.com/deislabs/wagi) [deislabs/hello-wagi-as](https://github.com/deislabs/hello-wagi-as)
+Code taken from [deislabs/wagi](https://github.com/deislabs/wagi) and [deislabs/hello-wagi-as](https://github.com/deislabs/hello-wagi-as)
 
 
 ### Set-up
 ```sh
+git clone https://github.com/anthonybudd/AssemblyScript-API-Boilerplate.git
+cd AssemblyScript-API-Boilerplate
 npm i
 npm run build
 
@@ -25,5 +27,3 @@ curl localhost:3000
 | GET         | `/_readiness`       | Kuber readiness check                 | --                                    | `healthy`         |  
 | **Demo Route**  |                 |                                       |                                       |                   |  
 | GET         | `/`                 | An example route                      | --                                    | `Welcome to the AssemblyScript REST API!`         | 
-| GET         | `/json`             | An example json response              | --                                    | `{ "obj":{"int":10,"str":""} }`         | 
-å
