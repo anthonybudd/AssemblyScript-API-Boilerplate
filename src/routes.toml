@@ -10,9 +10,3 @@ entrypoint = "index"
 route = "/_readiness"
 module = "./build/optimized.wat"
 entrypoint = "_readiness"
-
-
-[[module]]
-route = "/json"
-module = "./build/optimized.wat"
-entrypoint = "json"
